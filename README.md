@@ -1,11 +1,9 @@
-# flint-n-steel
+# Ollama -> llm -> docker setup
+
+
+#
 
 # Ollama + deepseek-r1 
-
-Run the **deepseek-r1** LLM through Ollama in one command.  
-The model is downloaded the first time, then cached in a named Docker
-volume so subsequent starts are instant.
-
 ---
 
 ## Prerequisites
@@ -16,11 +14,17 @@ volume so subsequent starts are instant.
 | docker-compose v2  | Comes with recent Docker Desktop    |
 | RAM                | 8 GB minimum (16 GB recommended)    |
 | Disk space         | ~15 GB for the deepseek-r1 weights  |
+| python             | 3.13.2                              |
+
 
 ---
 
-## Quick Start (one-liner)
+# Quick Start (one-liner)
 
 ```bash
 docker compose up -d      # builds image, pulls model, runs server
 ```
+
+#
+# use via http (lan only)
+    http://[ip-printed-on-terminal]:11434/api/generate
