@@ -1,0 +1,13 @@
+# ----------  docker-compose.yml  ----------
+services:
+  ollama:
+    build: .
+    container_name: ollama-deepseek
+    ports:
+      - "11434:11434"          # HostPort:ContainerPort
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: unless-stopped
+
+volumes:
+  ollama_data:
